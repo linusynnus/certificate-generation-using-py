@@ -18,7 +18,8 @@ for i in range(len(names_list)):
 
 
     name_to_print = names_list[i]
-    date_to_print = "23/03/2020"   #Change this date as per requirement
+    #date_to_print = "23/03/2020"   
+    # #Change this date as per requirement
 
     # Load image in OpenCV  
     image = cv2.imread("cer.jpg")  
@@ -31,12 +32,12 @@ for i in range(len(names_list)):
 
     draw = ImageDraw.Draw(pil_im)  
     # use a truetype font  
-    font = ImageFont.truetype("./fonts/MLSJN.TTF", 29)      #You can change fonts from list given bottom
-    font1 = ImageFont.truetype("./fonts/OLDENGL.TTF", 22) 
+    font = ImageFont.truetype("./fonts/Lato-Black.ttf", 29)      #You can change fonts from list given bottom
+    font1 = ImageFont.truetype("./fonts/TrajanPro-Regular.ttf", 22) 
 
     # Draw the text 
-    draw.text((int(coordinates[0]), int(coordinates[1])), name_to_print, font=font , fill='red')
-    draw.text((int(coordinates[2]), int(coordinates[3])), date_to_print , font=font1, fill='blue')
+    draw.text((int(coordinates[0]), int(coordinates[1])), name_to_print, font=font , fill='black')
+    #draw.text((int(coordinates[2]), int(coordinates[3])), date_to_print , font=font1, fill='blue')
     
     # Get back the image to OpenCV  
     cv2_im_processed = cv2.cvtColor(np.array(pil_im), cv2.COLOR_RGB2BGR)  
@@ -50,20 +51,4 @@ for i in range(len(names_list)):
     cv2.waitKey(0)  
 
     cv2.destroyAllWindows()
-    
-
-'''
-Other vareity of FONTS (Make sure you give proper path)
-
-MLSJN.TTF
-Lato-Black.ttf
-MATURASC.TTF
-OLDENGL.TTF
-VIVALDII.TTF
-copperplate gothic font.ttf
-
-
-'''
-
-
 
