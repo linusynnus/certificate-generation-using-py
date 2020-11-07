@@ -22,7 +22,7 @@ for i in range(len(names_list)):
     # #Change this date as per requirement
 
     # Load image in OpenCV  
-    image = cv2.imread("cer.jpg")  
+    image = cv2.imread("ce3.jpg")  
 
     # Convert the image to RGB (OpenCV uses BGR)  
     cv2_im_rgb = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)  
@@ -32,7 +32,7 @@ for i in range(len(names_list)):
 
     draw = ImageDraw.Draw(pil_im)  
     # use a truetype font  
-    font = ImageFont.truetype("./fonts/Lato-Black.ttf", 29)      #You can change fonts from list given bottom
+    font = ImageFont.truetype("./fonts/Lato-Black.ttf", 20)      #You can change fonts from list given bottom
     font1 = ImageFont.truetype("./fonts/TrajanPro-Regular.ttf", 22) 
 
     # Draw the text 
